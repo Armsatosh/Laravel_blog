@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a952b29-d627-47e1-ad1b-a05d703978a6" name="Default Changelist" comment="" />
+    <list default="true" id="7a952b29-d627-47e1-ad1b-a05d703978a6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/BaseController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/blog/post/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RestTestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RestTestController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/BlogPost.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BlogPost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/debugbar/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/debugbar/.gitignore" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +39,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -163,14 +192,17 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Models" />
     </key>
@@ -191,11 +223,27 @@
       <updated>1600956731608</updated>
       <workItem from="1600956732778" duration="4127000" />
       <workItem from="1601021859998" duration="14300000" />
+      <workItem from="1601281712201" duration="2288000" />
+      <workItem from="1601542172300" duration="4651000" />
+      <workItem from="1601546854028" duration="12000" />
+      <workItem from="1601546940371" duration="12162000" />
+      <workItem from="1601627213122" duration="11659000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="578" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601023747143">
@@ -210,17 +258,25 @@
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
     <state width="254" height="195" key="DatabaseViewActions_Filter/47.27.1873.1053@47.27.1873.1053" timestamp="1601023778467" />
-    <state x="766" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1601048481435">
+    <state x="766" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1601295536046">
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
-    <state x="766" y="311" width="424" height="491" key="FileChooserDialogImpl/47.27.1873.1053@47.27.1873.1053" timestamp="1601048481435" />
+    <state x="766" y="311" width="424" height="491" key="FileChooserDialogImpl/47.27.1873.1053@47.27.1873.1053" timestamp="1601295536046" />
     <state width="271" height="456" key="HiddenNamespacesPopup" timestamp="1601027623614">
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
     <state width="271" height="456" key="HiddenNamespacesPopup/47.27.1873.1053@47.27.1873.1053" timestamp="1601027623614" />
-    <state x="495" y="188" width="977" height="737" key="SettingsEditor" timestamp="1601028075204">
+    <state x="495" y="188" width="977" height="737" key="SettingsEditor" timestamp="1601547045675">
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
-    <state x="495" y="188" width="977" height="737" key="SettingsEditor/47.27.1873.1053@47.27.1873.1053" timestamp="1601028075204" />
+    <state x="495" y="188" width="977" height="737" key="SettingsEditor/47.27.1873.1053@47.27.1873.1053" timestamp="1601547045675" />
+    <state x="578" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1601641396711">
+      <screen x="47" y="27" width="1873" height="1053" />
+    </state>
+    <state x="578" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/47.27.1873.1053@47.27.1873.1053" timestamp="1601641396711" />
+    <state x="-59" y="227" width="1673" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1601555046561">
+      <screen x="47" y="27" width="1873" height="1053" />
+    </state>
+    <state x="-59" y="227" width="1673" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog/47.27.1873.1053@47.27.1873.1053" timestamp="1601555046561" />
   </component>
 </project>
