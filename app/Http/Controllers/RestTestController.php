@@ -13,7 +13,11 @@ class RestTestController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
 
+=======
+        dd("OK");
+>>>>>>> origin/master
     }
 
     /**
@@ -23,7 +27,11 @@ class RestTestController extends Controller
      */
     public function create()
     {
+<<<<<<< HEAD
 
+=======
+        //
+>>>>>>> origin/master
     }
 
     /**
