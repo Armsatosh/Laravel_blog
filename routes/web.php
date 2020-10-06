@@ -24,12 +24,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //----------- ADMIN PART -----------//
 $groupData = [
-    'namspace' => 'Blog\Admin',
+    'namespace' => 'Blog\Admin',
     'prefix'   => 'admin/blog'
 ];
 Route::group($groupData,function (){
     //BlogCategory
     $methods = ['index','edit','store','update', 'create'];
-    Route::resource('categories','CategoryCantroller')->only($methods)->names('blog.admin.categories');
+    Route::resource('categories','CategoryController')->only($methods)->names('blog.admin.categories');
 });
 //------- End Admin Part -------//

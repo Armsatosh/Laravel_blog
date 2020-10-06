@@ -19,14 +19,28 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a952b29-d627-47e1-ad1b-a05d703978a6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/BaseController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/blog/post/index.blade.php" afterDir="false" />
+    <list default="true" id="7a952b29-d627-47e1-ad1b-a05d703978a6" name="Default Changelist" comment="Create seeds and fackerFactory">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_10_20,_19_28_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_10_20__19_28__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/CategoryController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Blog/BaseController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Blog/PostController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/blog/admin/categories/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/blog/admin/categories/includes/item_edit_add_col.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/blog/admin/categories/includes/item_edit_main_col.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/blog/admin/categories/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RestTestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RestTestController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/BlogPost.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BlogPost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/BlogCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BlogCategory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/debugbar/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,8 +241,18 @@
       <workItem from="1601542172300" duration="4651000" />
       <workItem from="1601546854028" duration="12000" />
       <workItem from="1601546940371" duration="12162000" />
-      <workItem from="1601627213122" duration="11659000" />
+      <workItem from="1601627213122" duration="12143000" />
+      <workItem from="1601885264896" duration="19533000" />
+      <workItem from="1601972480506" duration="5583000" />
     </task>
+    <task id="LOCAL-00001" summary="Create seeds and fackerFactory">
+      <created>1601652498921</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601652498921</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,12 +268,21 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Create seeds and fackerFactory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create seeds and fackerFactory" />
   </component>
   <component name="WindowStateProjectService">
     <state x="578" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601023747143">
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
     <state x="578" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/47.27.1873.1053@47.27.1873.1053" timestamp="1601023747143" />
+    <state x="337" y="123" width="1311" height="867" key="CommitChangelistDialog2" timestamp="1601989602628">
+      <screen x="47" y="27" width="1873" height="1053" />
+    </state>
+    <state x="337" y="123" width="1311" height="867" key="CommitChangelistDialog2/47.27.1873.1053@47.27.1873.1053" timestamp="1601989602628" />
     <state x="754" y="469" width="449" height="175" key="ComposerInitDialogKey" timestamp="1600959244527">
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
@@ -258,22 +291,30 @@
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
     <state width="254" height="195" key="DatabaseViewActions_Filter/47.27.1873.1053@47.27.1873.1053" timestamp="1601023778467" />
-    <state x="766" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1601295536046">
+    <state x="766" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1601983701104">
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
-    <state x="766" y="311" width="424" height="491" key="FileChooserDialogImpl/47.27.1873.1053@47.27.1873.1053" timestamp="1601295536046" />
+    <state x="766" y="311" width="424" height="491" key="FileChooserDialogImpl/47.27.1873.1053@47.27.1873.1053" timestamp="1601983701104" />
     <state width="271" height="456" key="HiddenNamespacesPopup" timestamp="1601027623614">
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
     <state width="271" height="456" key="HiddenNamespacesPopup/47.27.1873.1053@47.27.1873.1053" timestamp="1601027623614" />
-    <state x="495" y="188" width="977" height="737" key="SettingsEditor" timestamp="1601547045675">
+    <state x="224" y="121" width="1498" height="879" key="MergeDialog" timestamp="1601652543319">
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
-    <state x="495" y="188" width="977" height="737" key="SettingsEditor/47.27.1873.1053@47.27.1873.1053" timestamp="1601547045675" />
-    <state x="578" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1601641396711">
+    <state x="224" y="121" width="1498" height="879" key="MergeDialog/47.27.1873.1053@47.27.1873.1053" timestamp="1601652543319" />
+    <state x="622" y="319" width="712" height="476" key="MultipleFileMergeDialog" timestamp="1601652549039">
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
-    <state x="578" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/47.27.1873.1053@47.27.1873.1053" timestamp="1601641396711" />
+    <state x="622" y="319" width="712" height="476" key="MultipleFileMergeDialog/47.27.1873.1053@47.27.1873.1053" timestamp="1601652549039" />
+    <state x="495" y="188" width="977" height="737" key="SettingsEditor" timestamp="1601907722284">
+      <screen x="47" y="27" width="1873" height="1053" />
+    </state>
+    <state x="495" y="188" width="977" height="737" key="SettingsEditor/47.27.1873.1053@47.27.1873.1053" timestamp="1601907722284" />
+    <state x="578" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1601913356180">
+      <screen x="47" y="27" width="1873" height="1053" />
+    </state>
+    <state x="578" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/47.27.1873.1053@47.27.1873.1053" timestamp="1601913356180" />
     <state x="-59" y="227" width="1673" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1601555046561">
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
