@@ -20,9 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a952b29-d627-47e1-ad1b-a05d703978a6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Repositories/BlogCategoryRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/CoreRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/BaseController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blog/admin/categories/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/admin/categories/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/BlogCategoryCreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/BlogCategoryCreateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,15 +183,20 @@
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-ide-helper" />
       <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/vendor/jason-guru/laravel-make-repository" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hxdZLys3VrG05rILzPqEW6kJk5" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -225,7 +237,9 @@
       <workItem from="1601546940371" duration="12162000" />
       <workItem from="1601627213122" duration="12143000" />
       <workItem from="1601885264896" duration="19533000" />
-      <workItem from="1601972480506" duration="8576000" />
+      <workItem from="1601972480506" duration="8761000" />
+      <workItem from="1602055849864" duration="3294000" />
+      <workItem from="1602077719011" duration="5225000" />
     </task>
     <task id="LOCAL-00001" summary="Create seeds and fackerFactory">
       <created>1601652498921</created>
@@ -248,7 +262,21 @@
       <option name="project" value="LOCAL" />
       <updated>1601994179624</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Create Category edit and Validate">
+      <created>1601997783158</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1601997783158</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Create Category edit and Validate">
+      <created>1601997831061</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601997831061</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +295,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Create seeds and fackerFactory" />
     <MESSAGE value="Create Category edit and Validate" />
     <option name="LAST_COMMIT_MESSAGE" value="Create Category edit and Validate" />
@@ -276,14 +305,14 @@
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
     <state x="578" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/47.27.1873.1053@47.27.1873.1053" timestamp="1601023747143" />
-    <state x="337" y="123" width="1311" height="867" key="CommitChangelistDialog2" timestamp="1601994174505">
+    <state x="337" y="123" width="1311" height="867" key="CommitChangelistDialog2" timestamp="1601997830890">
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
-    <state x="337" y="123" width="1311" height="867" key="CommitChangelistDialog2/47.27.1873.1053@47.27.1873.1053" timestamp="1601994174505" />
-    <state x="754" y="469" width="449" height="175" key="ComposerInitDialogKey" timestamp="1600959244527">
+    <state x="337" y="123" width="1311" height="867" key="CommitChangelistDialog2/47.27.1873.1053@47.27.1873.1053" timestamp="1601997830890" />
+    <state x="754" y="469" width="449" height="175" key="ComposerInitDialogKey" timestamp="1602076115245">
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
-    <state x="754" y="469" width="449" height="175" key="ComposerInitDialogKey/47.27.1873.1053@47.27.1873.1053" timestamp="1600959244527" />
+    <state x="754" y="469" width="449" height="175" key="ComposerInitDialogKey/47.27.1873.1053@47.27.1873.1053" timestamp="1602076115245" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1601023778467">
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
