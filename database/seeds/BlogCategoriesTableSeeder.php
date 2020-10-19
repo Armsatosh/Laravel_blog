@@ -19,7 +19,7 @@ class BlogCategoriesTableSeeder extends Seeder
             'slug'  => str_slug($cName),
             'parent_id' => 0,
         ];
-        for ($i = 1 ; $i <= 10; $i++){
+        for ($i = 2 ; $i <= 11; $i++){
             $cName = 'Category #'.$i;
             $parentId = ($i < 4) ? random_int(1, 4):1;
 

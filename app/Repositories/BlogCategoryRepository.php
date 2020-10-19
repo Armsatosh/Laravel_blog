@@ -3,12 +3,12 @@
 namespace App\Repositories;
 
 use Barryvdh\Reflection\DocBlock\Type\Collection;
-use Illuminate\Database\Eloquent\Model;
-
+use App\Models\BlogCategory as Model;
 
 
 /**
  * Class BlogCategoryRepository.
+ * @package App\Repositories
  */
 class BlogCategoryRepository extends CoreRepository
 {
@@ -33,22 +33,27 @@ class BlogCategoryRepository extends CoreRepository
     /**
      * @param int $id
      *
-     * @return Collection|\Illuminate\Database\Eloquent\Collection|Model[]
+     * @return Collection
      */
     public function getForComboBox ()
     {
-//        return $this->startConditions()->all();
         $columns = implode(', ',[
             'id',
             'CONCAT (id,". ",title) AS id_title',
         ]);
 
-        $resoult[] = $this
+        $resoult = $this
             ->startConditions()
             ->selectRaw($columns)
             ->toBase()
             ->get();
+        return $resoult;
     }
+    /**
+     * @param int|null $perPage
+     *
+     *@return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+     */
 
     public function getAllWithPaginate($perPage = null)
     {
