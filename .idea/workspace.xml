@@ -20,16 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a952b29-d627-47e1-ad1b-a05d703978a6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Repositories/BlogCategoryRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/CoreRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_10_20,_19_28_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_10_20__19_28__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/BaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/BlogCategoryCreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/BlogCategoryCreateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +194,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -239,7 +233,12 @@
       <workItem from="1601885264896" duration="19533000" />
       <workItem from="1601972480506" duration="8761000" />
       <workItem from="1602055849864" duration="3294000" />
-      <workItem from="1602077719011" duration="5225000" />
+      <workItem from="1602077719011" duration="5424000" />
+      <workItem from="1602144695515" duration="547000" />
+      <workItem from="1602237951447" duration="1657000" />
+      <workItem from="1602247806337" duration="1151000" />
+      <workItem from="1602251034251" duration="1277000" />
+      <workItem from="1602491014951" duration="22000" />
     </task>
     <task id="LOCAL-00001" summary="Create seeds and fackerFactory">
       <created>1601652498921</created>
@@ -276,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601997831061</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Start creating Category Repository">
+      <created>1602083922521</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1602083922522</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,17 +304,19 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Create seeds and fackerFactory" />
     <MESSAGE value="Create Category edit and Validate" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Category edit and Validate" />
+    <MESSAGE value="Start createng Category Repository" />
+    <MESSAGE value="Start creating Category Repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start creating Category Repository" />
   </component>
   <component name="WindowStateProjectService">
     <state x="578" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601023747143">
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
     <state x="578" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/47.27.1873.1053@47.27.1873.1053" timestamp="1601023747143" />
-    <state x="337" y="123" width="1311" height="867" key="CommitChangelistDialog2" timestamp="1601997830890">
+    <state x="337" y="123" width="1311" height="867" key="CommitChangelistDialog2" timestamp="1602083922114">
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
-    <state x="337" y="123" width="1311" height="867" key="CommitChangelistDialog2/47.27.1873.1053@47.27.1873.1053" timestamp="1601997830890" />
+    <state x="337" y="123" width="1311" height="867" key="CommitChangelistDialog2/47.27.1873.1053@47.27.1873.1053" timestamp="1602083922114" />
     <state x="754" y="469" width="449" height="175" key="ComposerInitDialogKey" timestamp="1602076115245">
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
@@ -317,10 +325,10 @@
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
     <state width="254" height="195" key="DatabaseViewActions_Filter/47.27.1873.1053@47.27.1873.1053" timestamp="1601023778467" />
-    <state x="766" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1601983701104">
+    <state x="766" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1602145247439">
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
-    <state x="766" y="311" width="424" height="491" key="FileChooserDialogImpl/47.27.1873.1053@47.27.1873.1053" timestamp="1601983701104" />
+    <state x="766" y="311" width="424" height="491" key="FileChooserDialogImpl/47.27.1873.1053@47.27.1873.1053" timestamp="1602145247439" />
     <state width="271" height="456" key="HiddenNamespacesPopup" timestamp="1601027623614">
       <screen x="47" y="27" width="1873" height="1053" />
     </state>

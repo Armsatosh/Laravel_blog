@@ -1,0 +1,825 @@
+Index: app/Http/Controllers/Auth/RegisterController.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\n\nnamespace App\\Http\\Controllers\\Auth;\n\nuse App\\User;\nuse App\\Http\\Controllers\\Controller;\nuse Illuminate\\Support\\Facades\\Hash;\nuse Illuminate\\Support\\Facades\\Validator;\nuse Illuminate\\Foundation\\Auth\\RegistersUsers;\n\nclass RegisterController extends Controller\n{\n    /*\n    |--------------------------------------------------------------------------\n    | Register Controller\n    |--------------------------------------------------------------------------\n    |\n    | This controller handles the registration of new users as well as their\n    | validation and creation. By default this controller uses a trait to\n    | provide this functionality without requiring any additional code.\n    |\n    */\n\n    use RegistersUsers;\n\n    /**\n     * Where to redirect users after registration.\n     *\n     * @var string\n     */\n    protected $redirectTo = '/home';\n\n    /**\n     * Create a new controller instance.\n     *\n     * @return void\n     */\n    public function __construct()\n    {\n        $this->middleware('guest');\n    }\n\n    /**\n     * Get a validator for an incoming registration request.\n     *\n     * @param  array  $data\n     * @return \\Illuminate\\Contracts\\Validation\\Validator\n     */\n    protected function validator(array $data)\n    {\n        return Validator::make($data, [\n            'name' => ['required', 'string', 'max:255'],\n            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],\n            'password' => ['required', 'string', 'min:6', 'confirmed'],\n        ]);\n    }\n\n    /**\n     * Create a new user instance after a valid registration.\n     *\n     * @param  array  $data\n     * @return \\App\\User\n     */\n    protected function create(array $data)\n    {\n        return User::create([\n            'name' => $data['name'],\n            'email' => $data['email'],\n            'password' => Hash::make($data['password']),\n        ]);\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/Http/Controllers/Auth/RegisterController.php	(revision df43bf57a77ea3e4280f32e9d3558d1721bab37a)
++++ app/Http/Controllers/Auth/RegisterController.php	(date 1602248195827)
+@@ -31,7 +31,7 @@
+     protected $redirectTo = '/home';
+ 
+     /**
+-     * Create a new controller instance.
++     * Create a new controller instance.[
+      *
+      * @return void
+      */
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_02_10_20__19_28__Default_Changelist_.xml
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Update_at_02_10_20__19_28__Default_Changelist_.xml	(revision df43bf57a77ea3e4280f32e9d3558d1721bab37a)
++++ .idea/shelf/Uncommitted_changes_before_Update_at_02_10_20__19_28__Default_Changelist_.xml	(revision df43bf57a77ea3e4280f32e9d3558d1721bab37a)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_02_10_20,_19_28_[Default_Changelist]" date="1601652550367" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_10_20,_19_28_[Default_Changelist]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 02.10.20, 19:28 [Default Changelist]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_02_10_20,_19_28_[Default_Changelist]/shelved.patch
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Update_at_02_10_20,_19_28_[Default_Changelist]/shelved.patch	(revision df43bf57a77ea3e4280f32e9d3558d1721bab37a)
++++ .idea/shelf/Uncommitted_changes_before_Update_at_02_10_20,_19_28_[Default_Changelist]/shelved.patch	(revision df43bf57a77ea3e4280f32e9d3558d1721bab37a)
+@@ -1,688 +0,0 @@
+-Index: app/Http/Controllers/Blog/Admin/CategoryController.php
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+---- app/Http/Controllers/Blog/Admin/CategoryController.php	(date 1601652418490)
+-+++ app/Http/Controllers/Blog/Admin/CategoryController.php	(date 1601652418490)
+-@@ -0,0 +1,85 @@
+-+<?php
+-+
+-+namespace App\Http\Controllers\Blog\Admin;
+-+
+-+use Illuminate\Http\Request;
+-+use App\Http\Controllers\Controller;
+-+
+-+class CategoryController extends BaseController
+-+{
+-+    /**
+-+     * Display a listing of the resource.
+-+     *
+-+     * @return \Illuminate\Http\Response
+-+     */
+-+    public function index()
+-+    {
+-+        //
+-+    }
+-+
+-+    /**
+-+     * Show the form for creating a new resource.
+-+     *
+-+     * @return \Illuminate\Http\Response
+-+     */
+-+    public function create()
+-+    {
+-+        //
+-+    }
+-+
+-+    /**
+-+     * Store a newly created resource in storage.
+-+     *
+-+     * @param  \Illuminate\Http\Request  $request
+-+     * @return \Illuminate\Http\Response
+-+     */
+-+    public function store(Request $request)
+-+    {
+-+        //
+-+    }
+-+
+-+    /**
+-+     * Display the specified resource.
+-+     *
+-+     * @param  int  $id
+-+     * @return \Illuminate\Http\Response
+-+     */
+-+    public function show($id)
+-+    {
+-+        //
+-+    }
+-+
+-+    /**
+-+     * Show the form for editing the specified resource.
+-+     *
+-+     * @param  int  $id
+-+     * @return \Illuminate\Http\Response
+-+     */
+-+    public function edit($id)
+-+    {
+-+        //
+-+    }
+-+
+-+    /**
+-+     * Update the specified resource in storage.
+-+     *
+-+     * @param  \Illuminate\Http\Request  $request
+-+     * @param  int  $id
+-+     * @return \Illuminate\Http\Response
+-+     */
+-+    public function update(Request $request, $id)
+-+    {
+-+        //
+-+    }
+-+
+-+    /**
+-+     * Remove the specified resource from storage.
+-+     *
+-+     * @param  int  $id
+-+     * @return \Illuminate\Http\Response
+-+     */
+-+    public function destroy($id)
+-+    {
+-+        //
+-+    }
+-+}
+-Index: app/Http/Controllers/HomeController.php
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+---- app/Http/Controllers/HomeController.php	(date 1601641075402)
+-+++ app/Http/Controllers/HomeController.php	(date 1601641075402)
+-@@ -0,0 +1,28 @@
+-+<?php
+-+
+-+namespace App\Http\Controllers;
+-+
+-+use Illuminate\Http\Request;
+-+
+-+class HomeController extends Controller
+-+{
+-+    /**
+-+     * Create a new controller instance.
+-+     *
+-+     * @return void
+-+     */
+-+    public function __construct()
+-+    {
+-+        $this->middleware('auth');
+-+    }
+-+
+-+    /**
+-+     * Show the application dashboard.
+-+     *
+-+     * @return \Illuminate\Contracts\Support\Renderable
+-+     */
+-+    public function index()
+-+    {
+-+        return view('home');
+-+    }
+-+}
+-Index: app/Http/Controllers/Blog/BaseController.php
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+---- app/Http/Controllers/Blog/BaseController.php	(date 1601563831722)
+-+++ app/Http/Controllers/Blog/BaseController.php	(date 1601563831722)
+-@@ -0,0 +1,11 @@
+-+<?php
+-+
+-+namespace App\Http\Controllers\Blog;
+-+
+-+use Illuminate\Http\Request;
+-+use App\Http\Controllers\Controller;
+-+
+-+abstract class BaseController extends Controller
+-+{
+-+    //
+-+}
+-Index: resources/views/auth/passwords/reset.blade.php
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+---- resources/views/auth/passwords/reset.blade.php	(date 1601641075354)
+-+++ resources/views/auth/passwords/reset.blade.php	(date 1601641075354)
+-@@ -0,0 +1,65 @@
+-+@extends('layouts.app')
+-+
+-+@section('content')
+-+<div class="container">
+-+    <div class="row justify-content-center">
+-+        <div class="col-md-8">
+-+            <div class="card">
+-+                <div class="card-header">{{ __('Reset Password') }}</div>
+-+
+-+                <div class="card-body">
+-+                    <form method="POST" action="{{ route('password.update') }}">
+-+                        @csrf
+-+
+-+                        <input type="hidden" name="token" value="{{ $token }}">
+-+
+-+                        <div class="form-group row">
+-+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+-+
+-+                            <div class="col-md-6">
+-+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ $email ?? old('email') }}" required autofocus>
+-+
+-+                                @if ($errors->has('email'))
+-+                                    <span class="invalid-feedback" role="alert">
+-+                                        <strong>{{ $errors->first('email') }}</strong>
+-+                                    </span>
+-+                                @endif
+-+                            </div>
+-+                        </div>
+-+
+-+                        <div class="form-group row">
+-+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+-+
+-+                            <div class="col-md-6">
+-+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+-+
+-+                                @if ($errors->has('password'))
+-+                                    <span class="invalid-feedback" role="alert">
+-+                                        <strong>{{ $errors->first('password') }}</strong>
+-+                                    </span>
+-+                                @endif
+-+                            </div>
+-+                        </div>
+-+
+-+                        <div class="form-group row">
+-+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+-+
+-+                            <div class="col-md-6">
+-+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+-+                            </div>
+-+                        </div>
+-+
+-+                        <div class="form-group row mb-0">
+-+                            <div class="col-md-6 offset-md-4">
+-+                                <button type="submit" class="btn btn-primary">
+-+                                    {{ __('Reset Password') }}
+-+                                </button>
+-+                            </div>
+-+                        </div>
+-+                    </form>
+-+                </div>
+-+            </div>
+-+        </div>
+-+    </div>
+-+</div>
+-+@endsection
+-Index: resources/views/auth/passwords/email.blade.php
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+---- resources/views/auth/passwords/email.blade.php	(date 1601641075354)
+-+++ resources/views/auth/passwords/email.blade.php	(date 1601641075354)
+-@@ -0,0 +1,47 @@
+-+@extends('layouts.app')
+-+
+-+@section('content')
+-+<div class="container">
+-+    <div class="row justify-content-center">
+-+        <div class="col-md-8">
+-+            <div class="card">
+-+                <div class="card-header">{{ __('Reset Password') }}</div>
+-+
+-+                <div class="card-body">
+-+                    @if (session('status'))
+-+                        <div class="alert alert-success" role="alert">
+-+                            {{ session('status') }}
+-+                        </div>
+-+                    @endif
+-+
+-+                    <form method="POST" action="{{ route('password.email') }}">
+-+                        @csrf
+-+
+-+                        <div class="form-group row">
+-+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+-+
+-+                            <div class="col-md-6">
+-+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+-+
+-+                                @if ($errors->has('email'))
+-+                                    <span class="invalid-feedback" role="alert">
+-+                                        <strong>{{ $errors->first('email') }}</strong>
+-+                                    </span>
+-+                                @endif
+-+                            </div>
+-+                        </div>
+-+
+-+                        <div class="form-group row mb-0">
+-+                            <div class="col-md-6 offset-md-4">
+-+                                <button type="submit" class="btn btn-primary">
+-+                                    {{ __('Send Password Reset Link') }}
+-+                                </button>
+-+                            </div>
+-+                        </div>
+-+                    </form>
+-+                </div>
+-+            </div>
+-+        </div>
+-+    </div>
+-+</div>
+-+@endsection
+-Index: app/Http/Controllers/Blog/PostController.php
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+---- app/Http/Controllers/Blog/PostController.php	(date 1601566003334)
+-+++ app/Http/Controllers/Blog/PostController.php	(date 1601566003334)
+-@@ -0,0 +1,87 @@
+-+<?php
+-+
+-+namespace App\Http\Controllers\Blog;
+-+
+-+use App\Models\BlogPost;
+-+use Illuminate\Http\Request;
+-+use App\Http\Controllers\Controller;
+-+
+-+class PostController extends BaseController
+-+{
+-+    /**
+-+     * Display a listing of the resource.
+-+     *
+-+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Http\Response|\Illuminate\View\View
+-+     */
+-+    public function index()
+-+    {
+-+        $items = BlogPost::all();
+-+        return view('blog.post.index',compact('items'));
+-+    }
+-+
+-+    /**
+-+     * Show the form for creating a new resource.
+-+     *
+-+     * @return \Illuminate\Http\Response
+-+     */
+-+    public function create()
+-+    {
+-+        //
+-+    }
+-+
+-+    /**
+-+     * Store a newly created resource in storage.
+-+     *
+-+     * @param  \Illuminate\Http\Request  $request
+-+     * @return \Illuminate\Http\Response
+-+     */
+-+    public function store(Request $request)
+-+    {
+-+        //
+-+    }
+-+
+-+    /**
+-+     * Display the specified resource.
+-+     *
+-+     * @param  int  $id
+-+     * @return \Illuminate\Http\Response
+-+     */
+-+    public function show($id)
+-+    {
+-+        //
+-+    }
+-+
+-+    /**
+-+     * Show the form for editing the specified resource.
+-+     *
+-+     * @param  int  $id
+-+     * @return \Illuminate\Http\Response
+-+     */
+-+    public function edit($id)
+-+    {
+-+        //
+-+    }
+-+
+-+    /**
+-+     * Update the specified resource in storage.
+-+     *
+-+     * @param  \Illuminate\Http\Request  $request
+-+     * @param  int  $id
+-+     * @return \Illuminate\Http\Response
+-+     */
+-+    public function update(Request $request, $id)
+-+    {
+-+        //
+-+    }
+-+
+-+    /**
+-+     * Remove the specified resource from storage.
+-+     *
+-+     * @param  int  $id
+-+     * @return \Illuminate\Http\Response
+-+     */
+-+    public function destroy($id)
+-+    {
+-+        //
+-+    }
+-+}
+-Index: resources/views/auth/register.blade.php
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+---- resources/views/auth/register.blade.php	(date 1601641075354)
+-+++ resources/views/auth/register.blade.php	(date 1601641075354)
+-@@ -0,0 +1,77 @@
+-+@extends('layouts.app')
+-+
+-+@section('content')
+-+<div class="container">
+-+    <div class="row justify-content-center">
+-+        <div class="col-md-8">
+-+            <div class="card">
+-+                <div class="card-header">{{ __('Register') }}</div>
+-+
+-+                <div class="card-body">
+-+                    <form method="POST" action="{{ route('register') }}">
+-+                        @csrf
+-+
+-+                        <div class="form-group row">
+-+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+-+
+-+                            <div class="col-md-6">
+-+                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+-+
+-+                                @if ($errors->has('name'))
+-+                                    <span class="invalid-feedback" role="alert">
+-+                                        <strong>{{ $errors->first('name') }}</strong>
+-+                                    </span>
+-+                                @endif
+-+                            </div>
+-+                        </div>
+-+
+-+                        <div class="form-group row">
+-+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+-+
+-+                            <div class="col-md-6">
+-+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+-+
+-+                                @if ($errors->has('email'))
+-+                                    <span class="invalid-feedback" role="alert">
+-+                                        <strong>{{ $errors->first('email') }}</strong>
+-+                                    </span>
+-+                                @endif
+-+                            </div>
+-+                        </div>
+-+
+-+                        <div class="form-group row">
+-+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+-+
+-+                            <div class="col-md-6">
+-+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+-+
+-+                                @if ($errors->has('password'))
+-+                                    <span class="invalid-feedback" role="alert">
+-+                                        <strong>{{ $errors->first('password') }}</strong>
+-+                                    </span>
+-+                                @endif
+-+                            </div>
+-+                        </div>
+-+
+-+                        <div class="form-group row">
+-+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+-+
+-+                            <div class="col-md-6">
+-+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+-+                            </div>
+-+                        </div>
+-+
+-+                        <div class="form-group row mb-0">
+-+                            <div class="col-md-6 offset-md-4">
+-+                                <button type="submit" class="btn btn-primary">
+-+                                    {{ __('Register') }}
+-+                                </button>
+-+                            </div>
+-+                        </div>
+-+                    </form>
+-+                </div>
+-+            </div>
+-+        </div>
+-+    </div>
+-+</div>
+-+@endsection
+-Index: resources/views/auth/login.blade.php
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+---- resources/views/auth/login.blade.php	(date 1601641075342)
+-+++ resources/views/auth/login.blade.php	(date 1601641075342)
+-@@ -0,0 +1,73 @@
+-+@extends('layouts.app')
+-+
+-+@section('content')
+-+<div class="container">
+-+    <div class="row justify-content-center">
+-+        <div class="col-md-8">
+-+            <div class="card">
+-+                <div class="card-header">{{ __('Login') }}</div>
+-+
+-+                <div class="card-body">
+-+                    <form method="POST" action="{{ route('login') }}">
+-+                        @csrf
+-+
+-+                        <div class="form-group row">
+-+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+-+
+-+                            <div class="col-md-6">
+-+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+-+
+-+                                @if ($errors->has('email'))
+-+                                    <span class="invalid-feedback" role="alert">
+-+                                        <strong>{{ $errors->first('email') }}</strong>
+-+                                    </span>
+-+                                @endif
+-+                            </div>
+-+                        </div>
+-+
+-+                        <div class="form-group row">
+-+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+-+
+-+                            <div class="col-md-6">
+-+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+-+
+-+                                @if ($errors->has('password'))
+-+                                    <span class="invalid-feedback" role="alert">
+-+                                        <strong>{{ $errors->first('password') }}</strong>
+-+                                    </span>
+-+                                @endif
+-+                            </div>
+-+                        </div>
+-+
+-+                        <div class="form-group row">
+-+                            <div class="col-md-6 offset-md-4">
+-+                                <div class="form-check">
+-+                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+-+
+-+                                    <label class="form-check-label" for="remember">
+-+                                        {{ __('Remember Me') }}
+-+                                    </label>
+-+                                </div>
+-+                            </div>
+-+                        </div>
+-+
+-+                        <div class="form-group row mb-0">
+-+                            <div class="col-md-8 offset-md-4">
+-+                                <button type="submit" class="btn btn-primary">
+-+                                    {{ __('Login') }}
+-+                                </button>
+-+
+-+                                @if (Route::has('password.request'))
+-+                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+-+                                        {{ __('Forgot Your Password?') }}
+-+                                    </a>
+-+                                @endif
+-+                            </div>
+-+                        </div>
+-+                    </form>
+-+                </div>
+-+            </div>
+-+        </div>
+-+    </div>
+-+</div>
+-+@endsection
+-Index: resources/views/auth/verify.blade.php
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+---- resources/views/auth/verify.blade.php	(date 1601641075354)
+-+++ resources/views/auth/verify.blade.php	(date 1601641075354)
+-@@ -0,0 +1,24 @@
+-+@extends('layouts.app')
+-+
+-+@section('content')
+-+<div class="container">
+-+    <div class="row justify-content-center">
+-+        <div class="col-md-8">
+-+            <div class="card">
+-+                <div class="card-header">{{ __('Verify Your Email Address') }}</div>
+-+
+-+                <div class="card-body">
+-+                    @if (session('resent'))
+-+                        <div class="alert alert-success" role="alert">
+-+                            {{ __('A fresh verification link has been sent to your email address.') }}
+-+                        </div>
+-+                    @endif
+-+
+-+                    {{ __('Before proceeding, please check your email for a verification link.') }}
+-+                    {{ __('If you did not receive the email') }}, <a href="{{ route('verification.resend') }}">{{ __('click here to request another') }}</a>.
+-+                </div>
+-+            </div>
+-+        </div>
+-+    </div>
+-+</div>
+-+@endsection
+-Index: resources/views/home.blade.php
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+---- resources/views/home.blade.php	(date 1601641075358)
+-+++ resources/views/home.blade.php	(date 1601641075358)
+-@@ -0,0 +1,23 @@
+-+@extends('layouts.app')
+-+
+-+@section('content')
+-+<div class="container">
+-+    <div class="row justify-content-center">
+-+        <div class="col-md-8">
+-+            <div class="card">
+-+                <div class="card-header">Dashboard</div>
+-+
+-+                <div class="card-body">
+-+                    @if (session('status'))
+-+                        <div class="alert alert-success" role="alert">
+-+                            {{ session('status') }}
+-+                        </div>
+-+                    @endif
+-+
+-+                    You are logged in!
+-+                </div>
+-+            </div>
+-+        </div>
+-+    </div>
+-+</div>
+-+@endsection
+-Index: resources/views/layouts/app.blade.php
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+---- resources/views/layouts/app.blade.php	(date 1601641075358)
+-+++ resources/views/layouts/app.blade.php	(date 1601641075358)
+-@@ -0,0 +1,80 @@
+-+<!DOCTYPE html>
+-+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+-+<head>
+-+    <meta charset="utf-8">
+-+    <meta name="viewport" content="width=device-width, initial-scale=1">
+-+
+-+    <!-- CSRF Token -->
+-+    <meta name="csrf-token" content="{{ csrf_token() }}">
+-+
+-+    <title>{{ config('app.name', 'Laravel') }}</title>
+-+
+-+    <!-- Scripts -->
+-+    <script src="{{ asset('js/app.js') }}" defer></script>
+-+
+-+    <!-- Fonts -->
+-+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+-+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+-+
+-+    <!-- Styles -->
+-+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+-+</head>
+-+<body>
+-+    <div id="app">
+-+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+-+            <div class="container">
+-+                <a class="navbar-brand" href="{{ url('/') }}">
+-+                    {{ config('app.name', 'Laravel') }}
+-+                </a>
+-+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+-+                    <span class="navbar-toggler-icon"></span>
+-+                </button>
+-+
+-+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+-+                    <!-- Left Side Of Navbar -->
+-+                    <ul class="navbar-nav mr-auto">
+-+
+-+                    </ul>
+-+
+-+                    <!-- Right Side Of Navbar -->
+-+                    <ul class="navbar-nav ml-auto">
+-+                        <!-- Authentication Links -->
+-+                        @guest
+-+                            <li class="nav-item">
+-+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+-+                            </li>
+-+                            @if (Route::has('register'))
+-+                                <li class="nav-item">
+-+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+-+                                </li>
+-+                            @endif
+-+                        @else
+-+                            <li class="nav-item dropdown">
+-+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+-+                                    {{ Auth::user()->name }} <span class="caret"></span>
+-+                                </a>
+-+
+-+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+-+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+-+                                       onclick="event.preventDefault();
+-+                                                     document.getElementById('logout-form').submit();">
+-+                                        {{ __('Logout') }}
+-+                                    </a>
+-+
+-+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+-+                                        @csrf
+-+                                    </form>
+-+                                </div>
+-+                            </li>
+-+                        @endguest
+-+                    </ul>
+-+                </div>
+-+            </div>
+-+        </nav>
+-+
+-+        <main class="py-4">
+-+            @yield('content')
+-+        </main>
+-+    </div>
+-+</body>
+-+</html>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"BranchesTreeState\">\n    <expand>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n    </expand>\n    <select />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"7a952b29-d627-47e1-ad1b-a05d703978a6\" name=\"Default Changelist\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/app/Repositories/BlogCategoryRepository.php\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/app/Repositories/CoreRepository.php\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/laravel.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/laravel.iml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/php.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/php.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/BaseController.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/BaseController.php\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/CategoryController.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/CategoryController.php\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/app/Http/Requests/BlogCategoryCreateRequest.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/Http/Requests/BlogCategoryCreateRequest.php\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/composer.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/composer.json\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/composer.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/composer.lock\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ComposerSettings\" doNotAsk=\"true\" synchronizationState=\"SYNCHRONIZE\">\n    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>\n    <execution />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"PackageJsonUpdateNotifier\">\n    <dismissed value=\"$PROJECT_DIR$/package.json\" />\n  </component>\n  <component name=\"PhpWorkspaceProjectConfiguration\">\n    <include_path>\n      <path value=\"$PROJECT_DIR$/vendor/dragonmantank/cron-expression\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/inflector\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/lexer\" />\n      <path value=\"$PROJECT_DIR$/vendor/composer\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-php80\" />\n      <path value=\"$PROJECT_DIR$/vendor/voku/portable-ascii\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-ctype\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-mbstring\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/css-selector\" />\n      <path value=\"$PROJECT_DIR$/vendor/graham-campbell/result-type\" />\n      <path value=\"$PROJECT_DIR$/vendor/phpoption/phpoption\" />\n      <path value=\"$PROJECT_DIR$/vendor/vlucas/phpdotenv\" />\n      <path value=\"$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/var-dumper\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/routing\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/deprecation-contracts\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/process\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-php72\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-php70\" />\n      <path value=\"$PROJECT_DIR$/vendor/paragonie/random_compat\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-php73\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/mime\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/http-foundation\" />\n      <path value=\"$PROJECT_DIR$/vendor/psr/event-dispatcher\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/event-dispatcher\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/finder\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/http-kernel\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/error-handler\" />\n      <path value=\"$PROJECT_DIR$/vendor/psr/log\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/string\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme\" />\n      <path value=\"$PROJECT_DIR$/vendor/psr/container\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/service-contracts\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/console\" />\n      <path value=\"$PROJECT_DIR$/vendor/swiftmailer/swiftmailer\" />\n      <path value=\"$PROJECT_DIR$/vendor/egulias/email-validator\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-iconv\" />\n      <path value=\"$PROJECT_DIR$/vendor/ramsey/collection\" />\n      <path value=\"$PROJECT_DIR$/vendor/brick/math\" />\n      <path value=\"$PROJECT_DIR$/vendor/ramsey/uuid\" />\n      <path value=\"$PROJECT_DIR$/vendor/psr/simple-cache\" />\n      <path value=\"$PROJECT_DIR$/vendor/opis/closure\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/translation\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/translation-contracts\" />\n      <path value=\"$PROJECT_DIR$/vendor/league/mime-type-detection\" />\n      <path value=\"$PROJECT_DIR$/vendor/league/commonmark\" />\n      <path value=\"$PROJECT_DIR$/vendor/monolog/monolog\" />\n      <path value=\"$PROJECT_DIR$/vendor/league/flysystem\" />\n      <path value=\"$PROJECT_DIR$/vendor/fruitcake/laravel-cors\" />\n      <path value=\"$PROJECT_DIR$/vendor/nesbot/carbon\" />\n      <path value=\"$PROJECT_DIR$/vendor/asm89/stack-cors\" />\n      <path value=\"$PROJECT_DIR$/vendor/laravel/framework\" />\n      <path value=\"$PROJECT_DIR$/vendor/fideloper/proxy\" />\n      <path value=\"$PROJECT_DIR$/vendor/psr/http-message\" />\n      <path value=\"$PROJECT_DIR$/vendor/psr/http-client\" />\n      <path value=\"$PROJECT_DIR$/vendor/guzzlehttp/psr7\" />\n      <path value=\"$PROJECT_DIR$/vendor/ralouphie/getallheaders\" />\n      <path value=\"$PROJECT_DIR$/vendor/guzzlehttp/promises\" />\n      <path value=\"$PROJECT_DIR$/vendor/guzzlehttp/guzzle\" />\n      <path value=\"$PROJECT_DIR$/vendor/phpdocumentor/reflection-common\" />\n      <path value=\"$PROJECT_DIR$/vendor/phpdocumentor/type-resolver\" />\n      <path value=\"$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock\" />\n      <path value=\"$PROJECT_DIR$/vendor/laravel/tinker\" />\n      <path value=\"$PROJECT_DIR$/vendor/webmozart/assert\" />\n      <path value=\"$PROJECT_DIR$/vendor/psy/psysh\" />\n      <path value=\"$PROJECT_DIR$/vendor/filp/whoops\" />\n      <path value=\"$PROJECT_DIR$/vendor/scrivo/highlight.php\" />\n      <path value=\"$PROJECT_DIR$/vendor/facade/ignition-contracts\" />\n      <path value=\"$PROJECT_DIR$/vendor/facade/flare-client-php\" />\n      <path value=\"$PROJECT_DIR$/vendor/facade/ignition\" />\n      <path value=\"$PROJECT_DIR$/vendor/nunomaduro/collision\" />\n      <path value=\"$PROJECT_DIR$/vendor/fzaninotto/faker\" />\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/recursion-context\" />\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/type\" />\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/environment\" />\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/exporter\" />\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/global-state\" />\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/code-unit\" />\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/object-enumerator\" />\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/resource-operations\" />\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/version\" />\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/comparator\" />\n      <path value=\"$PROJECT_DIR$/vendor/mockery/mockery\" />\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/diff\" />\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/object-reflector\" />\n      <path value=\"$PROJECT_DIR$/vendor/nikic/php-parser\" />\n      <path value=\"$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir\" />\n      <path value=\"$PROJECT_DIR$/vendor/hamcrest/hamcrest-php\" />\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/php-timer\" />\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/cli-parser\" />\n      <path value=\"$PROJECT_DIR$/vendor/theseer/tokenizer\" />\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/php-file-iterator\" />\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/php-invoker\" />\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/php-text-template\" />\n      <path value=\"$PROJECT_DIR$/vendor/phar-io/manifest\" />\n      <path value=\"$PROJECT_DIR$/vendor/phar-io/version\" />\n      <path value=\"$PROJECT_DIR$/vendor/myclabs/deep-copy\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/instantiator\" />\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/php-code-coverage\" />\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/phpunit\" />\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/lines-of-code\" />\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/complexity\" />\n      <path value=\"$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup\" />\n      <path value=\"$PROJECT_DIR$/vendor/phpspec/prophecy\" />\n      <path value=\"$PROJECT_DIR$/vendor/psr/http-factory\" />\n      <path value=\"$PROJECT_DIR$/vendor/nexmo/client-core\" />\n      <path value=\"$PROJECT_DIR$/vendor/nexmo/client\" />\n      <path value=\"$PROJECT_DIR$/vendor/erusev/parsedown\" />\n      <path value=\"$PROJECT_DIR$/vendor/laravel/nexmo-notification-channel\" />\n      <path value=\"$PROJECT_DIR$/vendor/laravel/slack-notification-channel\" />\n      <path value=\"$PROJECT_DIR$/vendor/phpunit/php-token-stream\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/debug\" />\n      <path value=\"$PROJECT_DIR$/vendor/lcobucci/jwt\" />\n      <path value=\"$PROJECT_DIR$/vendor/php-http/guzzle6-adapter\" />\n      <path value=\"$PROJECT_DIR$/vendor/php-http/promise\" />\n      <path value=\"$PROJECT_DIR$/vendor/php-http/httplug\" />\n      <path value=\"$PROJECT_DIR$/vendor/beyondcode/laravel-dump-server\" />\n      <path value=\"$PROJECT_DIR$/vendor/kylekatarnls/update-helper\" />\n      <path value=\"$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter\" />\n      <path value=\"$PROJECT_DIR$/vendor/jakub-onderka/php-console-color\" />\n      <path value=\"$PROJECT_DIR$/vendor/zendframework/zend-diactoros\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/filesystem\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/event-manager\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/cache\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/dbal\" />\n      <path value=\"$PROJECT_DIR$/vendor/justinrainbow/json-schema\" />\n      <path value=\"$PROJECT_DIR$/vendor/seld/jsonlint\" />\n      <path value=\"$PROJECT_DIR$/vendor/seld/phar-utils\" />\n      <path value=\"$PROJECT_DIR$/vendor/barryvdh/reflection-docblock\" />\n      <path value=\"$PROJECT_DIR$/vendor/barryvdh/laravel-ide-helper\" />\n      <path value=\"$PROJECT_DIR$/vendor/maximebf/debugbar\" />\n      <path value=\"$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar\" />\n      <path value=\"$PROJECT_DIR$/vendor/jason-guru/laravel-make-repository\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/http-client-contracts\" />\n    </include_path>\n  </component>\n  <component name=\"ProjectId\" id=\"1hxdZLys3VrG05rILzPqEW6kJk5\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"ASKED_ADD_EXTERNAL_FILES\" value=\"true\" />\n    <property name=\"DatabaseDriversLRU\" value=\"mysql\" />\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/app/Http/Controllers/Blog/Admin\" />\n    <property name=\"nodejs_interpreter_path.stuck_in_default_project\" value=\"undefined stuck path\" />\n    <property name=\"nodejs_npm_path_reset_for_default_project\" value=\"true\" />\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.pluginManager\" />\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/app/Http/Controllers/Blog/Admin\" />\n    </key>\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/app/Models\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration name=\"phpunit.xml\" type=\"PHPUnitRunConfigurationType\" factoryName=\"PHPUnit\">\n      <TestRunner scope=\"XML\" />\n      <method v=\"2\" />\n    </configuration>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"7a952b29-d627-47e1-ad1b-a05d703978a6\" name=\"Default Changelist\" comment=\"\" />\n      <created>1600956731608</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1600956731608</updated>\n      <workItem from=\"1600956732778\" duration=\"4127000\" />\n      <workItem from=\"1601021859998\" duration=\"14300000\" />\n      <workItem from=\"1601281712201\" duration=\"2288000\" />\n      <workItem from=\"1601542172300\" duration=\"4651000\" />\n      <workItem from=\"1601546854028\" duration=\"12000\" />\n      <workItem from=\"1601546940371\" duration=\"12162000\" />\n      <workItem from=\"1601627213122\" duration=\"12143000\" />\n      <workItem from=\"1601885264896\" duration=\"19533000\" />\n      <workItem from=\"1601972480506\" duration=\"8761000\" />\n      <workItem from=\"1602055849864\" duration=\"3294000\" />\n      <workItem from=\"1602077719011\" duration=\"5225000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Create seeds and fackerFactory\">\n      <created>1601652498921</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1601652498921</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Create Category edit and Validate\">\n      <created>1601992811582</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1601992811582</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Create Category edit and Validate\">\n      <created>1601994179624</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1601994179624</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Create Category edit and Validate\">\n      <created>1601997783158</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1601997783158</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Create Category edit and Validate\">\n      <created>1601997831061</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1601997831061</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"6\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\n    <MESSAGE value=\"Create seeds and fackerFactory\" />\n    <MESSAGE value=\"Create Category edit and Validate\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Create Category edit and Validate\" />\n  </component>\n  <component name=\"WindowStateProjectService\">\n    <state x=\"578\" y=\"215\" width=\"800\" height=\"684\" key=\"#com.intellij.execution.impl.EditConfigurationsDialog\" timestamp=\"1601023747143\">\n      <screen x=\"47\" y=\"27\" width=\"1873\" height=\"1053\" />\n    </state>\n    <state x=\"578\" y=\"215\" width=\"800\" height=\"684\" key=\"#com.intellij.execution.impl.EditConfigurationsDialog/47.27.1873.1053@47.27.1873.1053\" timestamp=\"1601023747143\" />\n    <state x=\"337\" y=\"123\" width=\"1311\" height=\"867\" key=\"CommitChangelistDialog2\" timestamp=\"1601997830890\">\n      <screen x=\"47\" y=\"27\" width=\"1873\" height=\"1053\" />\n    </state>\n    <state x=\"337\" y=\"123\" width=\"1311\" height=\"867\" key=\"CommitChangelistDialog2/47.27.1873.1053@47.27.1873.1053\" timestamp=\"1601997830890\" />\n    <state x=\"754\" y=\"469\" width=\"449\" height=\"175\" key=\"ComposerInitDialogKey\" timestamp=\"1602076115245\">\n      <screen x=\"47\" y=\"27\" width=\"1873\" height=\"1053\" />\n    </state>\n    <state x=\"754\" y=\"469\" width=\"449\" height=\"175\" key=\"ComposerInitDialogKey/47.27.1873.1053@47.27.1873.1053\" timestamp=\"1602076115245\" />\n    <state width=\"254\" height=\"195\" key=\"DatabaseViewActions_Filter\" timestamp=\"1601023778467\">\n      <screen x=\"47\" y=\"27\" width=\"1873\" height=\"1053\" />\n    </state>\n    <state width=\"254\" height=\"195\" key=\"DatabaseViewActions_Filter/47.27.1873.1053@47.27.1873.1053\" timestamp=\"1601023778467\" />\n    <state x=\"766\" y=\"311\" width=\"424\" height=\"491\" key=\"FileChooserDialogImpl\" timestamp=\"1601983701104\">\n      <screen x=\"47\" y=\"27\" width=\"1873\" height=\"1053\" />\n    </state>\n    <state x=\"766\" y=\"311\" width=\"424\" height=\"491\" key=\"FileChooserDialogImpl/47.27.1873.1053@47.27.1873.1053\" timestamp=\"1601983701104\" />\n    <state width=\"271\" height=\"456\" key=\"HiddenNamespacesPopup\" timestamp=\"1601027623614\">\n      <screen x=\"47\" y=\"27\" width=\"1873\" height=\"1053\" />\n    </state>\n    <state width=\"271\" height=\"456\" key=\"HiddenNamespacesPopup/47.27.1873.1053@47.27.1873.1053\" timestamp=\"1601027623614\" />\n    <state x=\"224\" y=\"121\" width=\"1498\" height=\"879\" key=\"MergeDialog\" timestamp=\"1601652543319\">\n      <screen x=\"47\" y=\"27\" width=\"1873\" height=\"1053\" />\n    </state>\n    <state x=\"224\" y=\"121\" width=\"1498\" height=\"879\" key=\"MergeDialog/47.27.1873.1053@47.27.1873.1053\" timestamp=\"1601652543319\" />\n    <state x=\"622\" y=\"319\" width=\"712\" height=\"476\" key=\"MultipleFileMergeDialog\" timestamp=\"1601652549039\">\n      <screen x=\"47\" y=\"27\" width=\"1873\" height=\"1053\" />\n    </state>\n    <state x=\"622\" y=\"319\" width=\"712\" height=\"476\" key=\"MultipleFileMergeDialog/47.27.1873.1053@47.27.1873.1053\" timestamp=\"1601652549039\" />\n    <state x=\"495\" y=\"188\" width=\"977\" height=\"737\" key=\"SettingsEditor\" timestamp=\"1601907722284\">\n      <screen x=\"47\" y=\"27\" width=\"1873\" height=\"1053\" />\n    </state>\n    <state x=\"495\" y=\"188\" width=\"977\" height=\"737\" key=\"SettingsEditor/47.27.1873.1053@47.27.1873.1053\" timestamp=\"1601907722284\" />\n    <state x=\"578\" y=\"289\" width=\"800\" height=\"535\" key=\"Vcs.Push.Dialog.v2\" timestamp=\"1601992822469\">\n      <screen x=\"47\" y=\"27\" width=\"1873\" height=\"1053\" />\n    </state>\n    <state x=\"578\" y=\"289\" width=\"800\" height=\"535\" key=\"Vcs.Push.Dialog.v2/47.27.1873.1053@47.27.1873.1053\" timestamp=\"1601992822469\" />\n    <state x=\"-59\" y=\"227\" width=\"1673\" height=\"853\" key=\"com.intellij.history.integration.ui.views.FileHistoryDialog\" timestamp=\"1601555046561\">\n      <screen x=\"47\" y=\"27\" width=\"1873\" height=\"1053\" />\n    </state>\n    <state x=\"-59\" y=\"227\" width=\"1673\" height=\"853\" key=\"com.intellij.history.integration.ui.views.FileHistoryDialog/47.27.1873.1053@47.27.1873.1053\" timestamp=\"1601555046561\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision df43bf57a77ea3e4280f32e9d3558d1721bab37a)
++++ .idea/workspace.xml	(date 1602491042853)
+@@ -20,16 +20,10 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="7a952b29-d627-47e1-ad1b-a05d703978a6" name="Default Changelist" comment="">
+-      <change afterPath="$PROJECT_DIR$/app/Repositories/BlogCategoryRepository.php" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/app/Repositories/CoreRepository.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel.iml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_10_20,_19_28_[Default_Changelist]/shelved.patch" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_10_20__19_28__Default_Changelist_.xml" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/BaseController.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/CategoryController.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/BlogCategoryCreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/BlogCategoryCreateRequest.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -200,7 +194,7 @@
+     <property name="DatabaseDriversLRU" value="mysql" />
+     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+     <property name="WebServerToolWindowFactoryState" value="false" />
+-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin" />
++    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+     <property name="nodejs_package_manager_path" value="npm" />
+@@ -239,7 +233,12 @@
+       <workItem from="1601885264896" duration="19533000" />
+       <workItem from="1601972480506" duration="8761000" />
+       <workItem from="1602055849864" duration="3294000" />
+-      <workItem from="1602077719011" duration="5225000" />
++      <workItem from="1602077719011" duration="5424000" />
++      <workItem from="1602144695515" duration="547000" />
++      <workItem from="1602237951447" duration="1657000" />
++      <workItem from="1602247806337" duration="1151000" />
++      <workItem from="1602251034251" duration="1277000" />
++      <workItem from="1602491014951" duration="22000" />
+     </task>
+     <task id="LOCAL-00001" summary="Create seeds and fackerFactory">
+       <created>1601652498921</created>
+@@ -276,7 +275,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1601997831061</updated>
+     </task>
+-    <option name="localTasksCounter" value="6" />
++    <task id="LOCAL-00006" summary="Start creating Category Repository">
++      <created>1602083922521</created>
++      <option name="number" value="00006" />
++      <option name="presentableId" value="LOCAL-00006" />
++      <option name="project" value="LOCAL" />
++      <updated>1602083922522</updated>
++    </task>
++    <option name="localTasksCounter" value="7" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -298,17 +304,19 @@
+     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+     <MESSAGE value="Create seeds and fackerFactory" />
+     <MESSAGE value="Create Category edit and Validate" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Create Category edit and Validate" />
++    <MESSAGE value="Start createng Category Repository" />
++    <MESSAGE value="Start creating Category Repository" />
++    <option name="LAST_COMMIT_MESSAGE" value="Start creating Category Repository" />
+   </component>
+   <component name="WindowStateProjectService">
+     <state x="578" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601023747143">
+       <screen x="47" y="27" width="1873" height="1053" />
+     </state>
+     <state x="578" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/47.27.1873.1053@47.27.1873.1053" timestamp="1601023747143" />
+-    <state x="337" y="123" width="1311" height="867" key="CommitChangelistDialog2" timestamp="1601997830890">
++    <state x="337" y="123" width="1311" height="867" key="CommitChangelistDialog2" timestamp="1602083922114">
+       <screen x="47" y="27" width="1873" height="1053" />
+     </state>
+-    <state x="337" y="123" width="1311" height="867" key="CommitChangelistDialog2/47.27.1873.1053@47.27.1873.1053" timestamp="1601997830890" />
++    <state x="337" y="123" width="1311" height="867" key="CommitChangelistDialog2/47.27.1873.1053@47.27.1873.1053" timestamp="1602083922114" />
+     <state x="754" y="469" width="449" height="175" key="ComposerInitDialogKey" timestamp="1602076115245">
+       <screen x="47" y="27" width="1873" height="1053" />
+     </state>
+@@ -317,10 +325,10 @@
+       <screen x="47" y="27" width="1873" height="1053" />
+     </state>
+     <state width="254" height="195" key="DatabaseViewActions_Filter/47.27.1873.1053@47.27.1873.1053" timestamp="1601023778467" />
+-    <state x="766" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1601983701104">
++    <state x="766" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1602145247439">
+       <screen x="47" y="27" width="1873" height="1053" />
+     </state>
+-    <state x="766" y="311" width="424" height="491" key="FileChooserDialogImpl/47.27.1873.1053@47.27.1873.1053" timestamp="1601983701104" />
++    <state x="766" y="311" width="424" height="491" key="FileChooserDialogImpl/47.27.1873.1053@47.27.1873.1053" timestamp="1602145247439" />
+     <state width="271" height="456" key="HiddenNamespacesPopup" timestamp="1601027623614">
+       <screen x="47" y="27" width="1873" height="1053" />
+     </state>
