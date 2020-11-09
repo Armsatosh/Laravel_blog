@@ -23,7 +23,6 @@ class CategoryController extends BaseController
         parent::__construct();
 
         $this->blogCategoryRepository = app(BlogCategoryRepository::class);
-//        dd("OK12344");
     }
 
     /**
@@ -42,7 +41,7 @@ class CategoryController extends BaseController
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function create()
     {
