@@ -19,13 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a952b29-d627-47e1-ad1b-a05d703978a6" name="Default Changelist" comment="">
+    <list default="true" id="7a952b29-d627-47e1-ad1b-a05d703978a6" name="Default Changelist" comment="workspace.xml">
+      <change afterPath="$PROJECT_DIR$/resources/views/blog/admin/posts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_10_20,_18_55_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_10_20__18_55__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/BaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/BlogCategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/BlogCategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/CoreRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/CoreRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blog/admin/categories/includes/item_edit_main_col.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/admin/categories/includes/item_edit_main_col.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/BlogPost.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BlogPost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/BlogPostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/BlogPostRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,6 +246,7 @@
       <workItem from="1602491014951" duration="22000" />
       <workItem from="1603119240976" duration="982000" />
       <workItem from="1603191799605" duration="8923000" />
+      <workItem from="1604997513801" duration="11304000" />
     </task>
     <task id="LOCAL-00001" summary="Create seeds and fackerFactory">
       <created>1601652498921</created>
@@ -330,6 +333,10 @@
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
     <state width="254" height="195" key="DatabaseViewActions_Filter/47.27.1873.1053@47.27.1873.1053" timestamp="1601023778467" />
+    <state x="147" y="127" width="1673" height="853" key="DiffContextDialog" timestamp="1604934301885">
+      <screen x="47" y="27" width="1873" height="1053" />
+    </state>
+    <state x="147" y="127" width="1673" height="853" key="DiffContextDialog/47.27.1873.1053@47.27.1873.1053" timestamp="1604934301885" />
     <state x="766" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1602145247439">
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
@@ -346,14 +353,22 @@
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
     <state x="622" y="319" width="712" height="476" key="MultipleFileMergeDialog/47.27.1873.1053@47.27.1873.1053" timestamp="1603119366364" />
-    <state x="495" y="188" width="977" height="737" key="SettingsEditor" timestamp="1601907722284">
+    <state x="47" y="533" width="453" height="547" key="NewPhpClassDialog" timestamp="1604938035303">
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
-    <state x="495" y="188" width="977" height="737" key="SettingsEditor/47.27.1873.1053@47.27.1873.1053" timestamp="1601907722284" />
+    <state x="47" y="533" width="453" height="547" key="NewPhpClassDialog/47.27.1873.1053@47.27.1873.1053" timestamp="1604938035303" />
+    <state x="495" y="188" width="977" height="737" key="SettingsEditor" timestamp="1604999070903">
+      <screen x="47" y="27" width="1873" height="1053" />
+    </state>
+    <state x="495" y="188" width="977" height="737" key="SettingsEditor/47.27.1873.1053@47.27.1873.1053" timestamp="1604999070903" />
     <state x="578" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603119629800">
       <screen x="47" y="27" width="1873" height="1053" />
     </state>
     <state x="578" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/47.27.1873.1053@47.27.1873.1053" timestamp="1603119629800" />
+    <state x="147" y="127" width="1673" height="853" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1604938391865">
+      <screen x="47" y="27" width="1873" height="1053" />
+    </state>
+    <state x="147" y="127" width="1673" height="853" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/47.27.1873.1053@47.27.1873.1053" timestamp="1604938391865" />
     <state x="-59" y="227" width="1673" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1601555046561">
       <screen x="47" y="27" width="1873" height="1053" />
     </state>

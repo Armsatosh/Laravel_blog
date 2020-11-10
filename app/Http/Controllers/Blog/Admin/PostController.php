@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Blog\Admin;
 
-use App\Repositories\BlogCategoryRepository;
+use App\Models\BlogPost;
 use App\Repositories\BlogPostRepository;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -31,7 +31,11 @@ class PostController extends BaseController
      */
     public function index()
     {
-        return view('blog.admin.posts.index');
+        $test = new BlogPost();
+        $test->category();
+        $paginator = $this->blogPostRepository->getAllWithPaginate();
+
+        return view('blog.admin.posts.index',compact('paginator'));
     }
 
     /**
@@ -41,7 +45,7 @@ class PostController extends BaseController
      */
     public function create()
     {
-        //
+        dd(__METHOD__);
     }
 
     /**
@@ -74,7 +78,7 @@ class PostController extends BaseController
      */
     public function edit($id)
     {
-        //
+        dd(__METHOD__,$id);
     }
 
     /**
@@ -86,7 +90,7 @@ class PostController extends BaseController
      */
     public function update(Request $request, $id)
     {
-        //
+        dd(__METHOD__,$request->all(),$id);
     }
 
     /**
@@ -97,6 +101,6 @@ class PostController extends BaseController
      */
     public function destroy($id)
     {
-        //
+        dd(__METHOD__,$id, request()->all());
     }
 }
